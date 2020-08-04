@@ -4,7 +4,7 @@ Generate a name with random character and item in anime or game.
 
 Sorry, but this readme have no Englist version for now, we will write it ASAP.
 
-序
+--序--
 
 之前虽然也在某些游戏的取名系统见过这样的玩法（例如暴雪的战网随机昵称以及MC代理版的随机昵称），但是我没有见到用动漫的名字和物品进行组合的程序和系统，故自己简单开发了一套。
 
@@ -12,7 +12,7 @@ Sorry, but this readme have no Englist version for now, we will write it ASAP.
 
 
 
-开发
+--开发--
 
 使用Python3.6.8开发，数据库使用MySQL 5.7.11
 
@@ -24,7 +24,7 @@ Sorry, but this readme have no Englist version for now, we will write it ASAP.
 
 
 
-引用的动漫作品
+--引用的动漫作品--
 
 目前绝大部分使用来自日本和中国的动漫作品（番剧），不会录入未TV化的动漫作品，如果一个角色出场率较低（一般为一集以下），或者官方定义为比较次要的角色，那么ta会被归为不重要角色，这类角色不会被录入数据库，以提高早期开发速度（但是后期可以录入）。
 
@@ -83,14 +83,14 @@ Sorry, but this readme have no Englist version for now, we will write it ASAP.
 	• 《Overlord》系列（部分安兹·乌尔·恭阵营角色）
 	
 
-组合
+--组合--
 
 默认情况下，在物品数据库和人物数据库随机挑出后组合即为结果，类似“姓名的物品”格式。
 
 早期开发时，物品基本与人物绑定，或为人物标志物以加快开发速度，有些人物可能没有对应物品，同样在后期录入时可以进行添加
 
 
-数据库
+--数据库--
 
 数据库默认叫anime_name，如果你从GitHub下载了完整的代码和数据库文件，请注意这一点
 
@@ -127,7 +127,7 @@ Sorry, but this readme have no Englist version for now, we will write it ASAP.
 注意，请不要输入重复的物品，目前仍在考虑是否使用更长位的varchar
 
 
-反转值
+--反转值--
 
 一开始，由于角色的姓名规则均为日本/中国的姓名规则（姓在前），但后来遇到了欧美姓名的情况(名在前)，特此引入一个解决方法-反转值
 
@@ -139,12 +139,15 @@ Sorry, but this readme have no Englist version for now, we will write it ASAP.
     
     e.g.平泽唯，涂山苏苏
   
+  
     
     1
     
     角色姓名符合欧美的姓名规则，短名字模式输出名字
     
     e.g.德拉·莫奇马兹，乔瑟夫·乔斯达
+    
+    
 
     2
     
@@ -152,23 +155,30 @@ Sorry, but this readme have no Englist version for now, we will write it ASAP.
     
     e.g.丹尼，伊奇
     
+    
     或者角色只有姓（或官方没有说明名字）
     
     e.g.高木同学，西片
+    
     
     或者角色虽然有姓名，但其别称更耳熟
     
     e.g.胖重，面玛
     
+    
     注意，仅有姓的应该也应该被录入到“名字”列
     
     （所有这一切只是为了加速开发周期）
+    
+    
     
     100
     
     角色姓名符合日本/中国的姓名规则，但短名字模式输出姓
     
     e.g.花京院典明，白银御行
+    
+    
 
     101
     
@@ -178,7 +188,7 @@ Sorry, but this readme have no Englist version for now, we will write it ASAP.
 
 短名字开关（short_name）以布尔值形式存在，真时不会输出姓（角色只有姓除外）
 
-后期录入
+--后期录入--
 
 后期数据库录入通过将视频接入弹幕检测系统，匹配符合规则的弹幕
 
@@ -233,7 +243,7 @@ Sorry, but this readme have no Englist version for now, we will write it ASAP.
 虽然录入不合法的物品不会被拉入黑名单，但我们仍然不鼓励这样做
 
 
-版权
+--版权--
 
 所有源代码和数据库在GitHub上开源发布，欢迎所有人对数据库和源代码进行优化和完善
 
