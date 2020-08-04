@@ -171,10 +171,8 @@ Sorry, but this readme have no English version for now, we will write it ASAP.
     
     e.g.胖重，面玛
     
+    注意，仅有姓的角色也应该被录入到“名字”列
     
-    注意，仅有姓的应该也应该被录入到“名字”列
-    
-    （所有这一切只是为了加速开发周期）
     
     
     
