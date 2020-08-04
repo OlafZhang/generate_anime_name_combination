@@ -84,7 +84,7 @@ Sorry, but this readme have no English version for now, we will write it ASAP.
 	
 	• 《Re：从零开始的异世界生活》（仅部分爱蜜莉雅阵营角色）
 	
-	• 《公主连结》（仅主角团）
+	• 《公主连结RE:DIVE》（仅主角团）
 	
 	• 《Overlord》系列（部分安兹·乌尔·恭阵营角色）
 	
