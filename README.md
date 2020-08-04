@@ -1,8 +1,14 @@
 # generate_anime_name_combination
+
 Generate a name with random character and item in anime or game.
+
 用随机的动漫角色和物品名称组合得到一个新名称
 
-Sorry, but this readme have no Englist version for now, we will write it ASAP.
+------------------------------------------------------------------------------
+
+Sorry, but this readme have no English version for now, we will write it ASAP.
+
+------------------------------------------------------------------------------
 
 --序--
 
