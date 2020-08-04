@@ -5,13 +5,19 @@ Generate a name with random character and item in anime or game.
 Sorry, but this readme have no Englist version for now, we will write it ASAP.
 
 序
+
 之前虽然也在某些游戏的取名系统见过这样的玩法（例如暴雪的战网随机昵称以及MC代理版的随机昵称），但是我没有见到用动漫的名字和物品进行组合的程序和系统，故自己简单开发了一套。
+
 另外，也是因为觉得docker对于默认容器的命名方式（科学家和物品）很有趣才开发这套系统的。
 
 开发
+
 使用Python3.6.8开发，数据库使用MySQL 5.7.11
+
 代码层反而是最简单的，只需要使用pymysql模块，数据库录入是相当麻烦的
+
 后期数据库录入通过将视频接入弹幕检测系统，匹配符合规则的弹幕（同样使用Python进行弹幕监听）
+
 主程序为douga.py
 
 引用的动漫作品
