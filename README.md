@@ -18,6 +18,16 @@ Sorry, but this readme have no English version for now, we will write it ASAP.
 
 
 
+--Opening--
+
+I have seen some name system like Blizzard battle.net default account name which combine a kind of thing and other kind of thing ( like Crazy hat, Happy boot and so on).
+
+and a similar system have been use in docker from default container name, use adjective combine with scientist (like happy_wozniak).
+
+But I don't see such a system with anime character name, so I make one.
+
+------------------------------------------------------------------------------
+
 --开发--
 
 使用Python3.6.8开发，数据库使用MySQL 5.7.11
@@ -29,6 +39,18 @@ Sorry, but this readme have no English version for now, we will write it ASAP.
 主程序为douga.py
 
 
+
+--Development--
+
+Base on Python 3.6.8, use MySQL 5.7.11 for database.
+
+Coding is very simple, just use a  library call "pymysql",but it's hard and tedious to recording a lot of data to database.
+
+Volunteer can input a danmuku conforms to the rules in my video from bilibili, By using Python monitoring, they can entering data to my database in order to make database richer.
+
+Main program is douga.py
+
+------------------------------------------------------------------------------
 
 --引用的动漫作品--
 
@@ -88,6 +110,69 @@ Sorry, but this readme have no English version for now, we will write it ASAP.
 	
 	• 《Overlord》系列（部分安兹·乌尔·恭阵营角色）
 	
+	
+	
+--Including anime series--
+
+Most of anime series is from Japan and China, and all are anime drama.
+
+If a character appearance rate is low ( 1 episode or lower), they won't be recording to database in early development, but we can add it later.
+
+For example,  In JoJo's Bizarre Adventure Season 3，most of negative character did not kill or cause a lot of damage to main character, so they won't be recording to database in JoJo's Bizarre Adventure Season 3. In Tamako Market ,  most of character have their own shop in Usagiyama Shopping District(うさぎ山商店街), but their name are rarely mentioned, so they also won't be recording to database in early development.
+
+But there may be special circumstances, such as some drama  with complex role system like JoJo's Bizarre Adventure Season 3 and 4.
+
+Early development version( beta v0.1 ) had recorded 213 characters name and 137 items name, I may update it in the future. ALL characters names and items are in Chinese for now.
+
+All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
+
+	• K-On! (Basically full cover)
+	
+	• Tamako Market ( Close to Kitashirakawa Tamako only )
+	
+	• JoJo's Bizarre Adventure
+	
+	• Teasing Master Takagi-san ( Basically full cover )
+	
+	• Kaguya-sama: Love Is War ( Student union full cover only )
+	
+	• A Certain Scientific Railgun ( A little, but A Certain Magical Index  is not includied )
+	
+	• LoveLive! and LoveLive!Sunshine! ( Contain μ's and Aqours, and other charaters )
+	
+	• Enmusubi no Youko-chan/Huyao Xiao Hongniang( Only family-name call Tushan/“涂山” )
+	
+	• Beyond the Boundary( Just two charaters )
+	
+	• Aho Girl ( Basically full cover )
+	
+	• Kimetsu no Yaiba
+	
+	• Anohana/The Flower We Saw That Day ( Main charaters )
+	
+	• Miss Kobayashi's Dragon Maid ( 5 main dragon charaters and Kobayashi )
+	
+	• We Never Learn ( Main charaters only )
+	
+	• Tom and Jerry( MGM ver. from 20 century, not  Warner Bros. ver. )
+	
+	• Wataten!: An Angel Flew Down to Me ( Basically full cover )
+	
+	• Love, Chunibyo & Other Delusions ( Basically full cover )
+	
+	• Rascal Does Not Dream of Bunny Girl Senpai  ( Close to Azusagawa Sakuta only )
+	
+	• Wasteful Days of High School Girls (Main charaters and Saku Momoi/LOLI)
+	
+	• Himouto! Umaru-chan (Basically full cover)
+	
+	• Re:Zero − Starting Life in Another World  (A little from Emilia's side)
+	
+	• Princess Connect! Re:Dive (Main charaters only)
+	
+	• Overlord (A little from Ainz Ooal Gown's side)
+	
+------------------------------------------------------------------------------
 
 --组合--
 
