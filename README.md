@@ -64,7 +64,7 @@ Main program is douga.py
 
 早期开发版本（beta v0.1）已经录入213个角色和137个物品，如果在b站的视频有较好播放量会继续更新，当前决定的更新周期为两个星期，且在9月份前确定正式版本。
 
-引用的动漫或动漫系列如下（角色引用资料来自萌娘百科）：
+引用的动漫/动漫系列/游戏系列如下（角色引用资料来自萌娘百科）：
 
 	• 《轻音少女》系列（基本全覆盖）
 	
@@ -114,6 +114,40 @@ Main program is douga.py
 	
 	• 《新世纪福音战士》（仅部分驾驶员和指挥官）
 	
+	• 《冰菓》(仅两个角色)
+	
+	• 《我想吃掉你的胰脏》(仅两个角色)
+	
+	• 《我的妹妹不可能那么可爱》(仅三个角色)
+	
+	• 《理科生坠入情网，故尝试证明。》(研究生全覆盖)
+	
+	• 《游戏人生》(仅两个角色)
+	
+	• 《书店里的骷髅店员本田》(全覆盖)
+	
+	• 《Urara迷路帖》(基本全覆盖)
+	
+	• 《马达加斯加》系列 (四个主角动物，企鹅阵营和朱利安阵营)
+	
+	• 《全职高手》(主角团及其游戏内昵称)
+	
+	• 《紫罗兰永恒花园》(部分主要角色)
+	
+	• 《夏目友人帐》(基本全覆盖)
+	
+	• 《女神异闻录5》(主角团)
+	
+	• 《齐木楠雄的灾难》(基本全覆盖)
+	
+	• 《塞尔达传说:旷野之息》(全覆盖)
+	
+	• 《心跳文学部》（全覆盖）
+	
+	• ... ...
+
+由于上次更新（2020-08-08）的番剧和游戏过多，下次更新将一并合并到一个单独文件，此README名称保留
+
 ------------------------------------------------------------------------------	
 	
 --Including anime series--
@@ -128,7 +162,7 @@ But there may be special circumstances, such as some drama  with complex role sy
 
 Early development version( beta v0.1 ) had recorded 213 characters name and 137 items name, I may update it in the future. ALL characters names and items are in Chinese for now.
 
-All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
+All drama name is here, refer to zh.moegirl.org.cn(萌娘百科):
 
 	• K-On! (Basically full cover)
 	
@@ -178,6 +212,41 @@ All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 	• Neon Genesis Evangelion（Some pliot and commander）
 	
+	• Hyouka (Just 2 characters)
+	
+	• I want to eat your pancreas ( Just 2 characters )
+	
+	• My Little Sister Can't Be This Cute! ( Just 3 characters )
+
+	• Science Fell in Love, So I Tried to Prove It ( Student full cover )
+
+	• NO GAME NO LIFE ( Just two character )
+
+	• Skull-face Bookseller Honda-san ( Full cover )
+
+	• Urara Meirocho ( Basically full cover )
+
+	• Madagascar ( 4 main animal character, Penguin side and King Julien side )
+
+	• The King's Avatar ( Main charaters and their nickname in game )
+
+	• Violet Evergarden ( Some main charaters )
+
+	• Natsume's Book of Friends ( Basically full cover )
+
+	• Persona 5 ( Main charaters only )
+
+	• The Disastrous Life of Saiki K ( Basically full cover )
+
+	• The Legend of Zelda: Breath of the Wild ( Full cover )
+
+	• Doki Doki Literature Club! ( Full cover )
+	
+	• ... ...
+	
+
+Last upgrade (2020-08-08) we pull too many anime drama and game, we will list them in another file in next upgrade, but we won't delete the list in README.
+
 ------------------------------------------------------------------------------
 
 --组合--
