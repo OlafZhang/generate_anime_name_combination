@@ -8,8 +8,8 @@ import pymysql,os,time
 file_name = ('name.txt')
 #数据库配置，请先配置，确保有数据库
 mysql_host = ("localhost")
-mysql_name = ("root")
-mysql_pass = ("123456")
+mysql_name = ("")
+mysql_pass = ("")
 mysql_db = ("anime_name")
 #忽视警告，真时不显示警告，且立刻开始录入
 skip_error = True
