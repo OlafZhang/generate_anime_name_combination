@@ -12,7 +12,7 @@ Although we start writing README in English, but it is not yet done, we will fin
 
 ------------------------------------------------------------------------------
 
---序--
+## 序
 
 之前虽然也在某些游戏的取名系统见过这样的玩法（例如暴雪的战网随机昵称以及MC代理版的随机昵称），但是我没有见到用动漫的名字和物品进行组合的程序和系统，故自己简单开发了一套。
 
@@ -20,7 +20,7 @@ Although we start writing README in English, but it is not yet done, we will fin
 
 ------------------------------------------------------------------------------
 
---Opening--
+## Opening
 
 I have seen some name system like Blizzard battle.net default account name which combine a kind of thing and other kind of thing ( like Crazy hat, Happy boot and so on).
 
@@ -30,7 +30,7 @@ But I don't see such a system with anime character name, so I make one.
 
 ------------------------------------------------------------------------------
 
---开发--
+## 开发
 
 使用Python3.6.8开发，数据库使用MySQL 5.7.11
 
@@ -42,7 +42,7 @@ But I don't see such a system with anime character name, so I make one.
 
 ------------------------------------------------------------------------------
 
---Development--
+## Development
 
 Base on Python 3.6.8, use MySQL 5.7.11 for database.
 
@@ -54,7 +54,7 @@ Main program is douga.py
 
 ------------------------------------------------------------------------------
 
---引用的动漫作品--
+##引用的动漫作品##
 
 目前绝大部分使用来自日本和中国的动漫作品（番剧），不会录入未TV化的动漫作品，如果一个角色出场率较低（一般为一集以下），或者官方定义为比较次要的角色，那么ta会被归为不重要角色，这类角色不会被录入数据库，以提高早期开发速度（但是后期可以录入）。
 
@@ -150,7 +150,7 @@ Main program is douga.py
 
 ------------------------------------------------------------------------------	
 	
---Including anime series--
+## Included anime series
 
 Most of anime series is from Japan and China, and all are anime drama.
 
@@ -249,14 +249,14 @@ Last upgrade (2020-08-08) we pull too many anime drama and game, we will list th
 
 ------------------------------------------------------------------------------
 
---组合--
+## 组合
 
 默认情况下，在物品数据库和人物数据库随机挑出后组合即为结果，类似“姓名的物品”格式。
 
 早期开发时，物品基本与人物绑定，或为人物标志物以加快开发速度，有些人物可能没有对应物品，同样在后期录入时可以进行添加
 
 
---数据库--
+## 数据库
 
 数据库默认叫anime_name，如果你从GitHub下载了完整的代码和数据库文件，请注意这一点
 
@@ -293,7 +293,7 @@ Last upgrade (2020-08-08) we pull too many anime drama and game, we will list th
 注意，请不要输入重复的物品，目前仍在考虑是否使用更长位的varchar
 
 
---反转值--
+## 反转值
 
 一开始，由于角色的姓名规则均为日本/中国的姓名规则（姓在前），但后来遇到了欧美姓名的情况(名在前)，特此引入一个解决方法-反转值
 
@@ -354,7 +354,7 @@ Last upgrade (2020-08-08) we pull too many anime drama and game, we will list th
 
 反转值不适用于复姓名字的一些情况，例如惣流·明日香·兰格雷（短名字为明日香），目前没有办法解决，请使用反转值2录入
 
---后期录入--
+## 后期录入
 
 后期数据库录入通过将视频接入弹幕检测系统，匹配符合规则的弹幕
 
@@ -409,7 +409,7 @@ Last upgrade (2020-08-08) we pull too many anime drama and game, we will list th
 虽然录入不合法的物品不会被拉入黑名单，但我们仍然不鼓励这样做
 
 
---版权--
+## 版权
 
 所有源代码和数据库在GitHub上开源发布，欢迎所有人对数据库和源代码进行优化和完善
 
