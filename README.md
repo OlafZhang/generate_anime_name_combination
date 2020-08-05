@@ -42,7 +42,7 @@ Volunteer can input a danmuku conforms to the rules in my video from bilibili, B
 
 Main program is douga.py
 
-##引用的动漫作品##
+## 引用的动漫作品
 
 目前绝大部分使用来自日本和中国的动漫作品（番剧），不会录入未TV化的动漫作品，如果一个角色出场率较低（一般为一集以下），或者官方定义为比较次要的角色，那么ta会被归为不重要角色，这类角色不会被录入数据库，以提高早期开发速度（但是后期可以录入）。
 
