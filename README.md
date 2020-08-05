@@ -70,7 +70,7 @@ Main program is douga.py
 	
 	• 《玉子市场》系列（仅玉子紧密相关角色）
 	
-	• 《JOJO的奇妙冒险》系列
+	• 《JOJO的奇妙冒险》系列 (主角团基本全覆盖，以及主要反派角色)
 	
 	• 《擅长作弄的高木同学》系列（基本全覆盖）
 	
@@ -86,7 +86,7 @@ Main program is douga.py
 	
 	• 《笨女孩》（基本全覆盖）
 	
-	• 《鬼灭之刃》
+	• 《鬼灭之刃》 (部分角色)
 	
 	• 《未闻花名》（仅主要角色）
 	
@@ -94,7 +94,7 @@ Main program is douga.py
 	
 	• 《我们无法一起学习》系列（仅主角团）
 	
-	• 《猫和老鼠》（MGM旧版上镜率较高角色）
+	• 《猫和老鼠》（MGM旧版上镜率较高角色，而非现在的华纳版）
 	
 	• 《天使降临到我身边》（基本全覆盖）
 	
@@ -112,6 +112,8 @@ Main program is douga.py
 	
 	• 《Overlord》系列（部分安兹·乌尔·恭阵营角色）
 	
+	• 《新世纪福音战士》（仅部分驾驶员和指挥官）
+	
 ------------------------------------------------------------------------------	
 	
 --Including anime series--
@@ -120,7 +122,7 @@ Most of anime series is from Japan and China, and all are anime drama.
 
 If a character appearance rate is low ( 1 episode or lower), they won't be recording to database in early development, but we can add it later.
 
-For example,  In JoJo's Bizarre Adventure Season 3，most of negative character did not kill or cause a lot of damage to main character, so they won't be recording to database in JoJo's Bizarre Adventure Season 3. In Tamako Market ,  most of character have their own shop in Usagiyama Shopping District(うさぎ山商店街), but their name are rarely mentioned, so they also won't be recording to database in early development.
+For example,  In JoJo's Bizarre Adventure Season 3，most of negative character did not kill or cause a lot of damage to main character, so they won't be recording to database in JoJo's Bizarre Adventure Season 3. In Tamako Market, most of character have their own shop in Usagiyama Shopping District(うさぎ山商店街), but their name are rarely mentioned, so they also won't be recording to database in early development.
 
 But there may be special circumstances, such as some drama  with complex role system like JoJo's Bizarre Adventure Season 3 and 4.
 
@@ -132,7 +134,7 @@ All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 	• Tamako Market ( Close to Kitashirakawa Tamako only )
 	
-	• JoJo's Bizarre Adventure
+	• JoJo's Bizarre Adventure ( Main charaters basically full cover, and some main negative character)
 	
 	• Teasing Master Takagi-san ( Basically full cover )
 	
@@ -142,13 +144,13 @@ All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 	• LoveLive! and LoveLive!Sunshine! ( Contain μ's and Aqours, and other charaters )
 	
-	• Enmusubi no Youko-chan/Huyao Xiao Hongniang( Only family-name call Tushan/“涂山” )
+	• Enmusubi no Youko-chan/Huyao Xiao Hongniang( Only family-name call Tushan/涂山 )
 	
 	• Beyond the Boundary( Just two charaters )
 	
 	• Aho Girl ( Basically full cover )
 	
-	• Kimetsu no Yaiba
+	• Kimetsu no Yaiba (A little)
 	
 	• Anohana/The Flower We Saw That Day ( Main charaters only )
 	
@@ -173,6 +175,8 @@ All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
 	• Princess Connect! Re:Dive ( Main charaters only )
 	
 	• Overlord ( A little from Ainz Ooal Gown's side )
+	
+	• Neon Genesis Evangelion（Some pliot and commander）
 	
 ------------------------------------------------------------------------------
 
