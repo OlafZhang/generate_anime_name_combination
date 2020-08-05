@@ -88,7 +88,7 @@ Main program is douga.py
 	
 	• 《鬼灭之刃》
 	
-	• 《未闻花名》（仅超和平Busters）
+	• 《未闻花名》（仅主要角色）
 	
 	• 《小林家的龙女仆》（仅登场的龙和小林）
 	
@@ -150,7 +150,7 @@ All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 	• Kimetsu no Yaiba
 	
-	• Anohana/The Flower We Saw That Day ( Main charaters )
+	• Anohana/The Flower We Saw That Day ( Main charaters only )
 	
 	• Miss Kobayashi's Dragon Maid ( 5 main dragon charaters and Kobayashi )
 	
