@@ -80,7 +80,7 @@ Main program is douga.py
 	
 	• 《LoveLive！》与《LoveLive！Sunshine！》（除了μ's和Aqours所有主角团，还包含了非主角团和其它角色）
 	
-	• 《狐妖小红娘》（仅涂山姓角色）
+	• 《狐妖小红娘》（部分角色）
 	
 	• 《境界的彼方》（仅两角色）
 	
@@ -178,7 +178,7 @@ All drama name is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 	• LoveLive! and LoveLive! Sunshine! ( Contain μ's and Aqours, and other charaters )
 	
-	• Enmusubi no Youko-chan/Huyao Xiao Hongniang( Only family-name call Tushan/涂山 )
+	• Enmusubi no Youko-chan/Huyao Xiao Hongniang (A little)
 	
 	• Beyond the Boundary( Just two charaters )
 	
