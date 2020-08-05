@@ -24,7 +24,7 @@ Although we start writing README in English, but it is not yet done, we will fin
 
 I have seen some name system like Blizzard battle.net default account name which combine a kind of thing and other kind of thing ( like Crazy hat, Happy boot and so on).
 
-and a similar system have been use in docker from default container name, use adjective combine with scientist (like happy_wozniak).
+and a similar system have been use in docker for default container name, use adjective combine with scientist (like happy_wozniak).
 
 But I don't see such a system with anime character name, so I make one.
 
