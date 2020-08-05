@@ -156,7 +156,7 @@ Most of anime series is from Japan and China, and all are anime drama.
 
 If a character appearance rate is low ( 1 episode or lower), they won't be recording to database in early development, but we can add it later.
 
-For example,  In JoJo's Bizarre Adventure Season 3，most of negative character did not kill or cause a lot of damage to main character, so they won't be recording to database in JoJo's Bizarre Adventure Season 3. In Tamako Market, most of character have their own shop in Usagiyama Shopping District(うさぎ山商店街), but their name are rarely mentioned, so they also won't be recording to database in early development.
+For example,  In JoJo's Bizarre Adventure Season 3，most of negative character did not kill or cause a lot of damage to main character, so they won't be recording to database in early development. In Tamako Market, most of character have their own shop in Usagiyama Shopping District(うさぎ山商店街), but their name are rarely mentioned, so they also won't be recording to database in early development.
 
 But there may be special circumstances, such as some drama  with complex role system like JoJo's Bizarre Adventure Season 3 and 4.
 
