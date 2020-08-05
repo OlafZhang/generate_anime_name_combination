@@ -6,7 +6,9 @@ Generate a name with random character and item in anime or game.
 
 ------------------------------------------------------------------------------
 
-Sorry, but this readme have no English version for now, we will write it ASAP.
+Although we start writing README in English, but it is not yet done, we will finish it ASAP.
+
+这份README正在用英语进行翻译，欢迎有能力的大佬进行辅助。
 
 ------------------------------------------------------------------------------
 
@@ -16,7 +18,7 @@ Sorry, but this readme have no English version for now, we will write it ASAP.
 
 另外，也是因为觉得docker对于默认容器的命名方式（科学家和物品）很有趣才开发这套系统的。
 
-
+------------------------------------------------------------------------------
 
 --Opening--
 
@@ -38,7 +40,7 @@ But I don't see such a system with anime character name, so I make one.
 
 主程序为douga.py
 
-
+------------------------------------------------------------------------------
 
 --Development--
 
@@ -110,7 +112,7 @@ Main program is douga.py
 	
 	• 《Overlord》系列（部分安兹·乌尔·恭阵营角色）
 	
-	
+------------------------------------------------------------------------------	
 	
 --Including anime series--
 
