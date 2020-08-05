@@ -30,14 +30,14 @@ def generate_name():
     count_cursor.close()
     #挑出范围内的任何一个名字
     name_cursor = db.cursor()
-    name_data_cursor = name_cursor.execute("select * from NAME")
-    name_data = name_cursor.fetchall()
-    random_name_count = int(random.randint(1,name_number - 1))
-    family_name = (str(name_data[random_name_count][1]))
-    last_name = (str(name_data[random_name_count][2]))
-    reverse_bool = (str(name_data[random_name_count][3]))
+    random_name_count = int(random.randint(0,int(name_number) - 1))
+    name_data_cursor = name_cursor.execute("select * from NAME limit " + str(random_name_count) + ",1")
+    name_data = name_cursor.fetchone()
+    family_name = str(name_data[1])
+    last_name = str(name_data[2])
+    reverse_bool = str(name_data[3])
     if short_name:
-        if str(reverse_bool) == str('101'):
+        if str(reverse_bool) == str('100') or str(reverse_bool) == str('101'):
             name = str(family_name)
         else:
             name = str(last_name)
@@ -51,14 +51,16 @@ def generate_name():
     name_cursor.close()
     #挑出范围内的任何一个物品
     item_cursor = db.cursor()
-    item_data_cursor = item_cursor.execute("select * from ITEM")
-    item_data = item_cursor.fetchall()
-    random_item_count = int(random.randint(1,item_number - 1))
-    item = (str(item_data[random_item_count][0]))
+    random_item_count = int(random.randint(0,int(item_number) - 1))
+    item_data_cursor = item_cursor.execute("select * from ITEM limit " + str(random_item_count) + ",1")
+    item_data = item_cursor.fetchone()
+    item = str(item_data[0])
     item_cursor.close()
     #合并输出
     final_name = (name + '的' + item)
     return final_name
 while True:
-    print(generate_name())
-    time.sleep(0.2)
+    for i in range(1,21):
+        print(generate_name())
+    time.sleep(10)
+
