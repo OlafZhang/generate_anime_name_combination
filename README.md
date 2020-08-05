@@ -174,9 +174,9 @@ All drama name is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 	• Kaguya-sama: Love Is War ( Student union full cover only )
 	
-	• A Certain Scientific Railgun ( A little, but A Certain Magical Index  is not includied )
+	• A Certain Scientific Railgun ( A little, but A Certain Magical Index is not includied )
 	
-	• LoveLive! and LoveLive!Sunshine! ( Contain μ's and Aqours, and other charaters )
+	• LoveLive! and LoveLive! Sunshine! ( Contain μ's and Aqours, and other charaters )
 	
 	• Enmusubi no Youko-chan/Huyao Xiao Hongniang( Only family-name call Tushan/涂山 )
 	
