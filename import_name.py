@@ -190,6 +190,6 @@ print("[*]文件内人物数量：" + str(error_name_count + new_name_count + du
 print("--------------------")
 print("[*]当前数据库人物数量：" + str(count_name()))
 print("--------------------")
-print("10秒后自动退出...")
-time.sleep(10)
+print("5秒后自动退出...")
+time.sleep(5)
 
