@@ -170,7 +170,7 @@ All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 	• Re:Zero − Starting Life in Another World  ( A little from Emilia's side )
 	
-	• Princess Connect! Re:Dive ( ain charaters only )
+	• Princess Connect! Re:Dive ( Main charaters only )
 	
 	• Overlord ( A little from Ainz Ooal Gown's side )
 	
