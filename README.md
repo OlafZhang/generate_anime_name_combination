@@ -4,21 +4,15 @@ Generate a name with random character and item in anime or game.
 
 用随机的动漫角色和物品名称组合得到一个新名称
 
-------------------------------------------------------------------------------
-
 Although we start writing README in English, but it is not yet done, we will finish it ASAP.
 
 这份README正在用英语进行翻译，欢迎有能力的大佬进行辅助。
-
-------------------------------------------------------------------------------
 
 ## 序
 
 之前虽然也在某些游戏的取名系统见过这样的玩法（例如暴雪的战网随机昵称以及MC代理版的随机昵称），但是我没有见到用动漫的名字和物品进行组合的程序和系统，故自己简单开发了一套。
 
 另外，也是因为觉得docker对于默认容器的命名方式（科学家和物品）很有趣才开发这套系统的。
-
-------------------------------------------------------------------------------
 
 ## Opening
 
@@ -27,8 +21,6 @@ I have seen some name system like Blizzard battle.net default account name which
 and a similar system have been use in docker for default container name, use adjective combine with scientist (like happy_wozniak).
 
 But I don't see such a system with anime character name, so I make one.
-
-------------------------------------------------------------------------------
 
 ## 开发
 
@@ -40,8 +32,6 @@ But I don't see such a system with anime character name, so I make one.
 
 主程序为douga.py
 
-------------------------------------------------------------------------------
-
 ## Development
 
 Base on Python 3.6.8, use MySQL 5.7.11 for database.
@@ -51,8 +41,6 @@ Coding is very simple, just use a  library call "pymysql",but it's hard and tedi
 Volunteer can input a danmuku conforms to the rules in my video from bilibili, By using Python monitoring, they can entering data to my database in order to make database richer.
 
 Main program is douga.py
-
-------------------------------------------------------------------------------
 
 ##引用的动漫作品##
 
@@ -64,7 +52,7 @@ Main program is douga.py
 
 早期开发版本（beta v0.1）已经录入213个角色和137个物品，如果在b站的视频有较好播放量会继续更新，当前决定的更新周期为两个星期，且在9月份前确定正式版本。
 
-引用的动漫/动漫系列/游戏系列如下（角色引用资料来自萌娘百科）：
+引用的动漫/动漫系列/游戏系列如下（角色引用资料来自[萌娘百科](https://zh.moegirl.org.cn/):）：
 
 	• 《轻音少女》系列（基本全覆盖）
 	
@@ -147,8 +135,6 @@ Main program is douga.py
 	• ... ...
 
 由于上次更新（2020-08-08）的番剧和游戏过多，下次更新将一并合并到一个单独文件，此README中的名称保留
-
-------------------------------------------------------------------------------	
 	
 ## Included anime series
 
@@ -162,7 +148,7 @@ But there may be special circumstances, such as some drama  with complex role sy
 
 Early development version( beta v0.1 ) had recorded 213 characters name and 137 items name, I may update it in the future. ALL characters names and items are in Chinese for now.
 
-All drama name is here, refer to zh.moegirl.org.cn(萌娘百科):
+All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 
 	• K-On! (Basically full cover)
 	
@@ -246,8 +232,6 @@ All drama name is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 
 Last upgrade (2020-08-08) we pull too many anime drama and game, we will list them in another file in next upgrade, but we won't delete the list in README.
-
-------------------------------------------------------------------------------
 
 ## 组合
 
