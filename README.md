@@ -164,15 +164,15 @@ All drama name in beta v0.1 is here, refer to zh.moegirl.org.cn(萌娘百科):
 	
 	• Rascal Does Not Dream of Bunny Girl Senpai  ( Close to Azusagawa Sakuta only )
 	
-	• Wasteful Days of High School Girls (Main charaters and Saku Momoi/LOLI)
+	• Wasteful Days of High School Girls ( Main charaters and Saku Momoi/LOLI )
 	
-	• Himouto! Umaru-chan (Basically full cover)
+	• Himouto! Umaru-chan ( Basically full cover )
 	
-	• Re:Zero − Starting Life in Another World  (A little from Emilia's side)
+	• Re:Zero − Starting Life in Another World  ( A little from Emilia's side )
 	
-	• Princess Connect! Re:Dive (Main charaters only)
+	• Princess Connect! Re:Dive ( ain charaters only )
 	
-	• Overlord (A little from Ainz Ooal Gown's side)
+	• Overlord ( A little from Ainz Ooal Gown's side )
 	
 ------------------------------------------------------------------------------
 
