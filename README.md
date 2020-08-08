@@ -313,7 +313,7 @@ Last upgrade (2020-08-08) we pull too many anime drama and game, we will list th
     
     或者角色虽然有姓名，但其别称更耳熟/不适合进行姓名拆分
     
-    e.g.胖重，面玛
+    e.g.胖重，面玛，苏沐橙
     
     注意，仅有姓的角色也应该被录入到“名字”列
     
