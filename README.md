@@ -26,7 +26,7 @@ But I don't see such a system with anime character name, so I make one.
 
 使用Python3.6.8开发，数据库使用MySQL 5.7.11
 
-代码层反而是最简单的，只需要使用pymysql模块，数据库录入是相当麻烦的
+代码层反而是最简单的，只需要使用pymysql模块，数据库的数据录入才是最麻烦的
 
 后期数据库录入通过将视频接入弹幕检测系统，匹配符合规则的弹幕（同样使用Python进行弹幕监听）
 
