@@ -330,7 +330,7 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
     
     这是数据库的默认值
     
-    e.g.平泽 **唯** ，涂山 **苏苏** 
+    e.g.平泽唯，涂山苏苏
   
   
     
@@ -338,7 +338,7 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
     
     角色姓名符合欧美的姓名规则，短名字模式输出名字
     
-    e.g.**德拉**·莫奇马兹，**乔瑟夫**·乔斯达
+    e.g.德拉·莫奇马兹，乔瑟夫·乔斯达
     
     
 
@@ -367,7 +367,7 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
     
     角色姓名符合日本/中国的姓名规则，但短名字模式输出姓
     
-    e.g.**花京院**典明，**白银**御行
+    e.g.花京院典明，白银御行
     
     
 
@@ -375,7 +375,7 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
     
     角色姓名符合欧美的姓名规则，但短名字模式输出姓
     
-    e.g.穆罕默德·**阿布德尔**，简·皮耶尔·**波鲁纳雷夫**
+    e.g.穆罕默德·阿布德尔，简·皮耶尔·波鲁纳雷夫
 
 短名字开关（short_name）以布尔值形式存在，真时不会输出姓（角色只有姓除外）
 
