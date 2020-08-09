@@ -279,7 +279,7 @@ In early development , when we record a character ,we may record a item about th
 	
 		a. 物品（ITEM，主键，非空，15位varchar）
 		
-	    目前仍在考虑是否使用更长位的varchar
+		目前仍在考虑是否使用更长位的varchar
 
 ## Database
 
