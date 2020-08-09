@@ -36,7 +36,7 @@ But I don't see such a system with anime character name, so I make one.
 
 Base on Python 3.6.8, use MySQL 5.7.11 for database.
 
-Coding is very simple, just use a  library call "pymysql",but it's hard and tedious to recording a lot of data to database.
+Coding is very simple, just use a  library call "pymysql",but it's hard and tedious to entering a lot of data to database.
 
 Volunteer can input a danmuku conforms to the rules in my video from bilibili, By using Python monitoring, they can entering data to my database in order to make database richer.
 
@@ -140,13 +140,13 @@ Main program is douga.py
 
 Most of anime series is from Japan and China, and all are anime drama.
 
-If a character appearance rate is low ( 1 episode or lower), they won't be recording to database in early development, but we can add it later.
+If a character appearance rate is low ( 1 episode or lower), they won't be entering to database in early development, but we can add it later.
 
-For example,  In JoJo's Bizarre Adventure Season 3，most of negative character did not kill or cause a lot of damage to main character, so they won't be recording to database in early development. In Tamako Market, most of character have their own shop in Usagiyama Shopping District(うさぎ山商店街), but their name are rarely mentioned, so they also won't be recording to database in early development.
+For example,  In JoJo's Bizarre Adventure Season 3，most of negative character did not kill or cause a lot of damage to main character, so they won't be entering to database in early development. In Tamako Market, most of character have their own shop in Usagiyama Shopping District(うさぎ山商店街), but their name are rarely mentioned, so they also won't be entering to database in early development.
 
 But there may be special circumstances, such as some drama  with complex role system like JoJo's Bizarre Adventure Season 3 and 4.
 
-Early development version( beta v0.1 ) had recorded 213 characters name and 137 items name, I may update it in the future. ALL characters names and items are in Chinese for now.
+Early development version( beta v0.1 ) had entered 213 characters name and 137 items name, I may update it in the future. ALL characters names and items are in Chinese for now.
 
 All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 
@@ -239,6 +239,11 @@ Last upgrade (2020-08-08) we pull too many anime drama and game, we will list th
 
 早期开发时，物品基本与人物绑定，或为人物标志物以加快开发速度，有些人物可能没有对应物品，同样在后期录入时可以进行添加
 
+## Combination
+
+douga.py will output a combination name with a random character name and a a random item by default.
+
+In early development , when we record a character ,we may record a item about this character , but  some character will not , Also can be updated in the future.
 
 ## 数据库
 
