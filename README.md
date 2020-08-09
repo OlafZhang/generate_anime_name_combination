@@ -281,7 +281,7 @@ In early development , when we record a character ,we may record a item about th
 		
 	    目前仍在考虑是否使用更长位的varchar
 
-##Database
+## Database
 
 Default database call 'anime_name', pay attention if you download the full code or table file from GitHub. 
 
