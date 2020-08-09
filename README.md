@@ -330,7 +330,7 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
     
     这是数据库的默认值
     
-    e.g.平泽**唯**，涂山**苏苏**
+    e.g.平泽 **唯** ，涂山 **苏苏** 
   
   
     
