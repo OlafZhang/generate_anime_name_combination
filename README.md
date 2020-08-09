@@ -154,7 +154,7 @@ All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 	
 	• Tamako Market ( Close to Kitashirakawa Tamako only )
 	
-	• JoJo's Bizarre Adventure ( Main charaters basically full cover, and some main negative character)
+	• JoJo's Bizarre Adventure ( Main charatcers basically full cover, and some main negative character)
 	
 	• Teasing Master Takagi-san ( Basically full cover )
 	
@@ -162,21 +162,21 @@ All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 	
 	• A Certain Scientific Railgun ( A little, but A Certain Magical Index is not includied )
 	
-	• LoveLive! and LoveLive! Sunshine! ( Contain μ's and Aqours, and other charaters )
+	• LoveLive! and LoveLive! Sunshine! ( Contain μ's and Aqours, and other charatcers )
 	
 	• Enmusubi no Youko-chan/Huyao Xiao Hongniang (A little)
 	
-	• Beyond the Boundary( Just two charaters )
+	• Beyond the Boundary( Just two charatcers )
 	
 	• Aho Girl ( Basically full cover )
 	
 	• Kimetsu no Yaiba (A little)
 	
-	• Anohana/The Flower We Saw That Day ( Main charaters only )
+	• Anohana/The Flower We Saw That Day ( Main charatcers only )
 	
-	• Miss Kobayashi's Dragon Maid ( 5 main dragon charaters and Kobayashi )
+	• Miss Kobayashi's Dragon Maid ( 5 main dragon charatcers and Kobayashi )
 	
-	• We Never Learn ( Main charaters only )
+	• We Never Learn ( Main charatcers only )
 	
 	• Tom and Jerry( MGM ver. from 20 century, not  Warner Bros. ver. )
 	
@@ -186,13 +186,13 @@ All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 	
 	• Rascal Does Not Dream of Bunny Girl Senpai  ( Close to Azusagawa Sakuta only )
 	
-	• Wasteful Days of High School Girls ( Main charaters and Saku Momoi/LOLI )
+	• Wasteful Days of High School Girls ( Main charatcers and Saku Momoi/LOLI )
 	
 	• Himouto! Umaru-chan ( Basically full cover )
 	
 	• Re:Zero − Starting Life in Another World  ( A little from Emilia's side )
 	
-	• Princess Connect! Re:Dive ( Main charaters only )
+	• Princess Connect! Re:Dive ( Main charatcers only )
 	
 	• Overlord ( A little from Ainz Ooal Gown's side )
 	
@@ -214,13 +214,13 @@ All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 
 	• Madagascar ( 4 main animal character, Penguin side and King Julien side )
 
-	• The King's Avatar ( Main charaters and their nickname in game )
+	• The King's Avatar ( Main charatcers and their nickname in game )
 
-	• Violet Evergarden ( Some main charaters )
+	• Violet Evergarden ( Some main charatcers )
 
 	• Natsume's Book of Friends ( Basically full cover )
 
-	• Persona 5 ( Main charaters only )
+	• Persona 5 ( Main charatcers only )
 
 	• The Disastrous Life of Saiki K ( Basically full cover )
 
@@ -259,7 +259,7 @@ In early development , when we record a character ,we may record a item about th
 	
 		a. 编号（NO，主键，非空，5位int）
 		
-		如果你自己下载了数据库文件，录入时注意编号，后期会制作开发人员版的数据库合并程序
+		已经编写好数据库录入程序，如果你仍然手动录入，请注意编号也需要手动录入
 		
 		b. 姓（FAMILY，非空，10位varchar）
 		
@@ -279,7 +279,45 @@ In early development , when we record a character ,we may record a item about th
 	
 		a. 物品（ITEM，主键，非空，15位varchar）
 		
-注意，请不要输入重复的物品，目前仍在考虑是否使用更长位的varchar
+	    目前仍在考虑是否使用更长位的varchar
+
+##Database
+
+Default database call 'anime_name', pay attention if you download the full code or table file from GitHub. 
+
+Coding with UTF-8.
+
+The database contains 2 tables, 'ITEM' table with item and 'NAME' table with character name.
+
+	• 'NAME' table with character name
+	
+	This table contains 4 columns.
+	
+		a. Number( NO, Primary key, Not null, int(5) )
+		
+		Now with auto-record code, if you record manually, you must enter number manually , too.
+		
+		b. Family name(FAMILY, Not null, varchar(10) )
+		
+		Input family name here. ( No matter family name is the first or the last )
+		
+		For compound surname, input non-last-name part.
+		
+		c. Last name( NAME, Not null, varchar(8) )
+		
+		Input last name here. ( No matter last name is the first or the last )
+		
+		d. Reverse value( REVERSE, tinyint(1)，default is 0 )
+	
+		For some charatcer that family name isn't the first like China and Japan, input the value in order to tell Python code how to output the name or short name. See 'Reverse value' below.
+		
+	• 'ITEM' table with item
+	
+	This table contains 1 column.
+	
+		a. Item ( ITEM,Primary key, Not null, varchar(15) )
+		
+		We may set varchar(25) ever longer in the future.
 
 
 ## 反转值
@@ -345,7 +383,9 @@ In early development , when we record a character ,we may record a item about th
 
 ## 后期录入
 
-后期数据库录入通过将视频接入弹幕检测系统，匹配符合规则的弹幕
+后期数据库录入通过将视频接入弹幕检测系统，匹配符合规则的弹幕。
+
+发送弹幕不会返回任何内容到发送者。
 
 为了防止数据库被注入攻击，所有弹幕内容被严格过滤，请不要尝试提交以下值：
 
@@ -354,6 +394,8 @@ In early development , when we record a character ,we may record a item about th
 	• SQL/Linux bash/Windows CMD等命令
 	
 	• Python代码
+	
+	• 在Github/Bilibili简介已经出现的例子
 	
 	• 含空格的字符串
 	
@@ -404,5 +446,14 @@ In early development , when we record a character ,we may record a item about th
 
 由于所有引用动漫作品没有得到官方许可，所以仅做娱乐和个人用途
 
-请不要用于商业等盈利场景，违规者本方不负责
+请不要用于商业等盈利场景!
+
+## Copyright
+
+All code and database tables is open source on GitHub, we welcome everyone to improve the source code and enrich the tables.
+
+All anime charatcers are not officially authorized, entertainment and personal use only.
+
+DO NOT USE IT IN BUSINESS PURPOSES! 
+
 
