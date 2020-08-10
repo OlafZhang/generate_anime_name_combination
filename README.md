@@ -4,9 +4,9 @@ Generate a name with random character and item in anime or game.
 
 用随机的动漫角色和物品名称组合得到一个新名称
 
-Although we start writing README in English, but it is not yet done, we will finish it ASAP.
+Although we finished this README in Chinese and English, but the translation in English may not be fully correct
 
-这份README正在用英语进行翻译，欢迎有能力的大佬进行辅助。
+这份README已经有英文版，但并不完全正确，欢迎进行完善。
 
 ## 序
 
@@ -154,7 +154,7 @@ All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 	
 	• Tamako Market ( Close to Kitashirakawa Tamako only )
 	
-	• JoJo's Bizarre Adventure ( Main charatcers basically full cover, and some main negative character)
+	• JoJo's Bizarre Adventure ( Main characters basically full cover, and some main negative character)
 	
 	• Teasing Master Takagi-san ( Basically full cover )
 	
@@ -162,21 +162,21 @@ All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 	
 	• A Certain Scientific Railgun ( A little, but A Certain Magical Index is not includied )
 	
-	• LoveLive! and LoveLive! Sunshine! ( Contain μ's and Aqours, and other charatcers )
+	• LoveLive! and LoveLive! Sunshine! ( Contain μ's and Aqours, and other characters )
 	
 	• Enmusubi no Youko-chan/Huyao Xiao Hongniang (A little)
 	
-	• Beyond the Boundary( Just two charatcers )
+	• Beyond the Boundary( Just two characters )
 	
 	• Aho Girl ( Basically full cover )
 	
 	• Kimetsu no Yaiba (A little)
 	
-	• Anohana/The Flower We Saw That Day ( Main charatcers only )
+	• Anohana/The Flower We Saw That Day ( Main characters only )
 	
-	• Miss Kobayashi's Dragon Maid ( 5 main dragon charatcers and Kobayashi )
+	• Miss Kobayashi's Dragon Maid ( 5 main dragon characters and Kobayashi )
 	
-	• We Never Learn ( Main charatcers only )
+	• We Never Learn ( Main characters only )
 	
 	• Tom and Jerry( MGM ver. from 20 century, not  Warner Bros. ver. )
 	
@@ -186,13 +186,13 @@ All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 	
 	• Rascal Does Not Dream of Bunny Girl Senpai  ( Close to Azusagawa Sakuta only )
 	
-	• Wasteful Days of High School Girls ( Main charatcers and Saku Momoi/LOLI )
+	• Wasteful Days of High School Girls ( Main characters and Saku Momoi/LOLI )
 	
 	• Himouto! Umaru-chan ( Basically full cover )
 	
 	• Re:Zero − Starting Life in Another World  ( A little from Emilia's side )
 	
-	• Princess Connect! Re:Dive ( Main charatcers only )
+	• Princess Connect! Re:Dive ( Main characters only )
 	
 	• Overlord ( A little from Ainz Ooal Gown's side )
 	
@@ -214,13 +214,13 @@ All drama name is here, refer to [萌娘百科](https://zh.moegirl.org.cn/):
 
 	• Madagascar ( 4 main animal character, Penguin side and King Julien side )
 
-	• The King's Avatar ( Main charatcers and their nickname in game )
+	• The King's Avatar ( Main characters and their nickname in game )
 
-	• Violet Evergarden ( Some main charatcers )
+	• Violet Evergarden ( Some main characters )
 
 	• Natsume's Book of Friends ( Basically full cover )
 
-	• Persona 5 ( Main charatcers only )
+	• Persona 5 ( Main characters only )
 
 	• The Disastrous Life of Saiki K ( Basically full cover )
 
@@ -303,13 +303,13 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
 		
 		For compound surname, input non-last-name part.
 		
-		c. Last name( NAME, Not null, varchar(8) )
+		c. Given name( NAME, Not null, varchar(8) )
 		
-		Input last name here. ( No matter last name is the first or the last )
+		Input given name here. ( No matter given name is the first or the last )
 		
 		d. Reverse value( REVERSE, tinyint(1)，default is 0 )
 	
-		For some charatcer that family name isn't the first like China and Japan, input the value in order to tell Python code how to output the name or short name. See 'Reverse value' below.
+		For some character that family name isn't the first like China and Japan, input the value in order to tell Python code how to output the name or short name. See 'Reverse value' below.
 		
 	• 'ITEM' table with item
 	
@@ -324,70 +324,145 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
 
 一开始，由于角色的姓名规则均为日本/中国的姓名规则（姓在前），但后来遇到了欧美姓名的情况(名在前)，特此引入一个解决方法-反转值
 
-    0
+    • 0
     
-    角色姓名符合日本/中国的姓名规则，短名字模式输出名字
-    
-    这是数据库的默认值
-    
-    e.g.平泽唯，涂山苏苏
+		角色姓名符合日本/中国的姓名规则，短名字模式输出名字
+		
+		这是数据库的默认值
+
+		e.g.平泽唯，涂山苏苏
   
   
     
-    1
+    • 1
     
-    角色姓名符合欧美的姓名规则，短名字模式输出名字
+		角色姓名符合欧美的姓名规则，短名字模式输出名字
+		
+		e.g.德拉·莫奇马兹，乔瑟夫·乔斯达
+		
     
-    e.g.德拉·莫奇马兹，乔瑟夫·乔斯达
+
+    • 2
+		
+		角色仅有名，无姓（或官方没有说明姓）
+		
+		e.g.丹尼，伊奇
+		
+		
+		或者角色只有姓（或官方没有说明名字）
+		
+		e.g.高木同学，西片
+		
+		
+		或者角色虽然有姓名，但其别称更耳熟/不适合进行姓名拆分
+		
+		e.g.胖重，面玛，苏沐橙
+		
+		注意，仅有姓的角色也应该被录入到“名字”列
+    
+    
+    
+    
+    • 100
+		
+		角色姓名符合日本/中国的姓名规则，但短名字模式输出姓
+		
+		e.g.花京院典明，白银御行
     
     
 
-    2
-    
-    角色仅有名，无姓（或官方没有说明姓）
-    
-    e.g.丹尼，伊奇
-    
-    
-    或者角色只有姓（或官方没有说明名字）
-    
-    e.g.高木同学，西片
-    
-    
-    或者角色虽然有姓名，但其别称更耳熟/不适合进行姓名拆分
-    
-    e.g.胖重，面玛，苏沐橙
-    
-    注意，仅有姓的角色也应该被录入到“名字”列
-    
-    
-    
-    
-    100
-    
-    角色姓名符合日本/中国的姓名规则，但短名字模式输出姓
-    
-    e.g.花京院典明，白银御行
-    
-    
+    • 101
+		
+		角色姓名符合欧美的姓名规则，但短名字模式输出姓
+		
+		e.g.穆罕默德·阿布德尔，简·皮耶尔·波鲁纳雷夫
 
-    101
-    
-    角色姓名符合欧美的姓名规则，但短名字模式输出姓
-    
-    e.g.穆罕默德·阿布德尔，简·皮耶尔·波鲁纳雷夫
+短名字开关（short_name）以布尔值形式存在，真时只输出名（0，1，2）或者姓（2，100，101）
 
-短名字开关（short_name）以布尔值形式存在，真时不会输出姓（角色只有姓除外）
+反转值不适用于某些情况，例如惣流·明日香·兰格雷（短名字为明日香），只能使用反转值2录入短名字
 
-反转值不适用于复姓名字的一些情况，例如惣流·明日香·兰格雷（短名字为明日香），目前没有办法解决，请使用反转值2录入
+## Reverse value
+	
+At first, most of the character's family name is the first, but we met  a special situation that some character's family name is the last, so we set reverse value in order to solve this problem.
+	
+	•  0
+	
+		Family name is the first, output given name in short name mode.
+		
+		This is the default value in 'NAME' table.
+		
+		e.g. Hirasawa Yui, Tushan Susu.
+	
+	•  1
+		
+		Family name is the last, output given name in short name mode.
+		
+		e.g. Dera Mochimazz, Joseph Joestar.
+	
+	•  2
+	
+		The character have no family name/family name not mentioned.
+		
+		e.g. Danny, Iggy.
+		
+		Or, the character have no given name/given name not mentioned.
+		
+		e.g. Takagi-san, Nishikata.
+		
+		Or, the character have both family name and given name, but we know their nickname more than full name/their full name is not suitable for splitting.
+		
+		e.g. Shigechi, Menma, Su Mucheng
+		
+	•   100
+	
+		Family name is the first, BUT output family name in short name mode.
+		
+		e.g. Kakyoin Noriaki, Shirogane Miyuki
+		
+	•   101
+	
+		Family name is the last, BUT output family name in short name mode.
+		
+		e.g. Muhammad Avdol, Jean Pierre Polnareff
+		
+		
+	Short name trigger is a boolean value in Python code, when True, code will output given name(0, 1, 2) or family name(2, 100, 101) only.
+	
+	For some situation, you must set reverse value to 2 and enter short name only, such as Soryu Asuka Langley(Short name should be 'Asuka').
 
-## 后期录入
+## 数据库录入
 
-后期数据库录入通过将视频接入弹幕检测系统，匹配符合规则的弹幕。
+数据库录入通过将视频接入弹幕检测系统，匹配符合规则的弹幕。
 
-发送弹幕不会返回任何内容到发送者。
+规则如下：
 
-为了防止数据库被注入攻击，所有弹幕内容被严格过滤，请不要尝试提交以下值：
+	• 对于人物，请使用‘人物:’作为开头，物品则使用‘物品:’作为开头（不包含引号）
+	
+	• 如果是物品/只有姓或名的角色，在冒号后输入物品/只有姓或名的角色就可以发送了
+	
+	• 如果是有姓名的角色，请用冒号继续分割姓名，姓在前名在后（即使本来就是名在前的角色）
+	
+	• 如果反转值是0，可以不输入，否则在后面加冒号并输入反转值
+	
+	• 冒号可以是中文模式（全角），也可以英文模式（半角），混合输入也没事
+	
+	• 例子：
+	
+		姓名：田所：浩二
+		
+		姓名：野兽
+		
+		姓名：白银：御行：100
+		
+		物品：软手机
+
+	• 如果上面的你都看不懂，直接发人物：+ 角色姓名，无需分割，例如：
+		
+		姓名：田所浩二
+		
+	• 发送弹幕不会返回任何内容到发送者，也不会直接操作数据库，不要想着如何黑掉数据库
+
+请不要尝试提交以下值：
 
 	• 空值
 	
@@ -407,15 +482,7 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
 	
 由于违规操作会造成代码和数据库的崩溃或不稳定，所有违规操作或疑似违规操作将记录UID，如果用户在视频发送违规格式的数据库录入型弹幕超过三次，将自动拉入黑名单，故意录入违规值（如颜文字）的用户将直接拉黑
 
-默认情况下，用户如果提交的是纯中文值，会被自动录入，如果是以下任何情况，将转为人工审核：
-
-	• 名字含大小写字母
-	
-	• 名字含数字
-	
-	• 名字含特殊符号或疑似正则表达式符号
-	
-	• 其它可能影响代码和数据库正常运行的值
+默认情况下，用户提交的所有值均先写入name.txt/item.txt，由人工确认后再使用录入程序写入。
 	
 我们鼓励大家尽可能提交纯中文值，即使这是国外作品的角色，目前没有考虑开发其它语言的版本，且纯中文录入能有效防止数据库被攻击
 
@@ -425,20 +492,25 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
 
 对于物品，类型不限制，可以是现实存在的，也可以是虚构的，也可以是小场景（例如花店）或其它未归类的物品或概念（如AT立场）等，但是它不能是：
 
-	• 不可被感知或看见的物品、抽象的概念（例如相对论）
+	• 不可被感知或看见的物品、任何概念（例如相对论）
 	
 	• 人物或人物概念（例如保镖，老婆）
 	
 	• 大场景或大区域（例如常盘台中学，东京都，兔山商店街）
 	
-	• 宗教和政治相关物品或概念（即使剧中出现也不允许）
+	• 宗教和政治相关物品（即使剧中出现也不允许）
 	
-	• 严重色情，严重违法物品或概念（在已过审剧中出现的物品或概念则不算，例如枪）
+	• 严重色情，严重违法物品（在已过审剧中出现的物品则不算，例如枪）
 	
-	• 其它认为不合适或违反相关法律法规的物品或概念
+	• 其它认为不合适或违反相关法律法规的物品
 	
 虽然录入不合法的物品不会被拉入黑名单，但我们仍然不鼓励这样做
 
+## Database entering
+
+We edit code to monitor the danmuku in my video on bilibili, and serach for danmuke that follows the rules.
+	
+Sorry, but the code can only detect Chinese, we will set this rule for English if somebody want.
 
 ## 版权
 
@@ -452,7 +524,7 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
 
 All code and database tables is open source on GitHub, we welcome everyone to improve the source code and enrich the tables.
 
-All anime charatcers are not officially authorized, entertainment and personal use only.
+All anime characters are not officially authorized, entertainment and personal use only.
 
 DO NOT USE IT IN BUSINESS PURPOSES! 
 
