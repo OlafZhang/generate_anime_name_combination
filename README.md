@@ -426,9 +426,9 @@ At first, most of the character's family name is the first, but we met  a speci
 		e.g. Muhammad Avdol, Jean Pierre Polnareff
 		
 		
-	Short name trigger is a boolean value in Python code, when True, code will output given name(0, 1, 2) or family name(2, 100, 101) only.
+Short name trigger is a boolean value in Python code, when True, code will output given name(0, 1, 2) or family name(2, 100, 101) only.
 	
-	For some situation, you must set reverse value to 2 and enter short name only, such as Soryu Asuka Langley(Short name should be 'Asuka').
+For some situation, you must set reverse value to 2 and enter short name only, such as Soryu Asuka Langley(Short name should be 'Asuka').
 
 ## 数据库录入
 
