@@ -243,7 +243,7 @@ Last upgrade (2020-08-08) we pull too many anime drama and game, we will list th
 
 douga.py will output a combination name with a random character name and a a random item by default.
 
-In early development , when we record a character ,we may record a item about this character , but  some character will not , Also can be updated in the future.
+In early development , when we enter a character ,we may enter a item about this character , but  some character will not , Also can be updated in the future.
 
 ## 数据库
 
@@ -295,7 +295,7 @@ The database contains 2 tables, 'ITEM' table with item and 'NAME' table with cha
 	
 		a. Number( NO, Primary key, Not null, int(5) )
 		
-		Now with auto-record code, if you record manually, you must enter number manually , too.
+		Now with auto-entered code, if you enter manually, you must enter number manually , too.
 		
 		b. Family name(FAMILY, Not null, varchar(10) )
 		
