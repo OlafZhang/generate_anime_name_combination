@@ -6,11 +6,13 @@ import requests,os,csv,time
 from bs4 import BeautifulSoup
 
 #这个不是b站播放页面的URL
-#在网上找工具转换一个视频的cid再来替换下面的url的数字
-#或者使用使用F12，查找pagelist?bvid=av号或bv号...格式的文件,其中就有cid
+#使用浏览器的F12开发者工具，查找pagelist?bvid=av号或bv号...格式的文件,其中就有cid
+#如果是番剧，查找data?r=loader&cid=，也有cid
+#都是xhr，方式为GET
 #如果有多分p，注意每个分p的cid都是不同的
+#也可以直接去相关网站使用BV号查cid号
 
-url = 'http://comment.bilibili.com/1145141919810.xml'
+url = 'http://comment.bilibili.com/21270514.xml'
 
 def get_csv(urll):   #请求的方式得到数据jason文件
     bvIndex = url.find('BV')
@@ -104,6 +106,7 @@ for line in file_final.readlines():
     timestamp = int(line[4])
     time_send = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(timestamp)))
     if int(timestamp) > int(timestamp_old):
+        timestamp_old = timestamp
         raw_text = str((line[8])[0:len(str(line[8])) - 1])
         if str(raw_text)[0:2] == '人物':
             if raw_text[2] == ":":
