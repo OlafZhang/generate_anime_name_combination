@@ -2,8 +2,8 @@
 #只会先写入到文件，然后需要手动运行数据库写入工具
 #违规词汇系统仍然在开发
 #这个只是套件的一部分，必须配合danmuku_main.py使用
-import requests,os,csv,time
-from bs4 import BeautifulSoup
+import os,time
+import danlib
 
 #这个不是b站播放页面的URL
 #使用浏览器的F12开发者工具，查找pagelist?bvid=av号或bv号...格式的文件,其中就有cid
@@ -12,80 +12,11 @@ from bs4 import BeautifulSoup
 #如果有多分p，注意每个分p的cid都是不同的
 #也可以直接去相关网站使用BV号查cid号
 
-url = 'http://comment.bilibili.com/21270514.xml'
+cid = 21270514
 
-def get_csv(urll):   #请求的方式得到数据jason文件
-    bvIndex = url.find('BV')
-    id = url[bvIndex:]
-    rr=requests.get(url=urll)
-    rr.encoding='uft-8'
-    soup=BeautifulSoup(rr.text,'lxml')
-    danmu_info=soup.find_all('d')
-    all_info=[]
-    all_text=[]
-    for i in danmu_info:
-        all_info.append(i['p'])
-        all_text.append(i)
-    f = open('danmu_info.csv', 'w', encoding='utf-8')
-    csv_writer = csv.writer(f)
-    for i in all_info:
-        i=str(i).split(',') #把弹幕信息分隔好
-        csv_writer.writerow(i)
-    f.close()
-    f = open('danmu_text.csv', 'w', encoding='utf-8')
-    csv_writer = csv.writer(f)
-    csv_writer.writerow(["内容"])
-    for i in all_text:
-        csv_writer.writerow(i)
-    f.close()
-if __name__=='__main__':
-    get_csv(url)
+file_name = danlib.getdanmuku(cid)
 
-
-file1 = open('danmu_text.csv', 'r', encoding='utf-8')
-file2 = open('danmu_text_output.csv', 'w', encoding='utf-8')
-for line in file1.readlines():
-    if line == '\n':
-        line = line.strip("\n")
-    file2.write(line)
-file1.close()
-file2.close()
-
-
-file1 = open('danmu_info.csv', 'r', encoding='utf-8')
-file2 = open('danmu_info_output.csv', 'w', encoding='utf-8')
-for line in file1.readlines():
-    if line == '\n':
-        line = line.strip("\n")
-    file2.write(line)
-file1.close()
-file2.close()
-
-
-danmuku_list = []
-file1 = open('danmu_text_output.csv', 'r', encoding='utf-8')
-file2 = open('danmu_info_output.csv', 'r', encoding='utf-8')
-file_final = open('danmuku_final.csv', 'w', encoding='utf-8')
-for line in file1.readlines():
-    danmuku = str(line)[0:int(len(line)) - 1]
-    danmuku_list.append(str(danmuku))
-count = 0
-danmuku_all_list = []
-for line in file2.readlines():
-    info = str(line)[0:int(len(line)) - 1]
-    final_text = str(info + "," + danmuku_list[count] + "\n")
-    file_final.write(final_text)
-    count += 1
-file1.close()
-file2.close()
-file_final.close()
-
-os.remove("danmu_info.csv")
-os.remove("danmu_text.csv")
-os.remove("danmu_info_output.csv")
-os.remove("danmu_text_output.csv")
-
-file_final = open('danmuku_final.csv', 'r', encoding='utf-8')
+file_final = open(file_name, 'r', encoding='utf-8')
 name_file = open('name.txt', 'a', encoding='utf-8')
 item_file = open('item.txt', 'a', encoding='utf-8')
 log_file = open('log.txt', 'a', encoding='utf-8')
@@ -162,5 +93,5 @@ name_file.close()
 item_file.close()
 file_final.close()
 log_file.close()
-os.remove('danmuku_final.csv')
+os.remove(file_name)
 

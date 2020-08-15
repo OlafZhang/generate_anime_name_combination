@@ -1,14 +1,32 @@
-#这是一个lib，下次更新删除主代码含有弹幕爬取的部分并用lib代替
-#暂时不想写readme，因为我是孙笑川懒狗
+# 这是一个lib，下次更新删除主代码含有弹幕爬取的部分并用lib代替
 
-import requests,os,csv,time
+# getdanmuku(cid_input)只允许输入cid数字
+# 它会爬取弹幕文件并返回一个弹幕文件完整路径，且在目录生成文件
+# 默认是以cid命名的csv文件
+
+# list(file_path, user_count)需要指定文件路径/文件名和想查询的列数
+# 这个能查询单个弹幕的信息，它会把原始弹幕行处理后返回一个列表，原文件不受影响
+# 如果遇到未知类型弹幕，则会返回原始信息，原始信息不会处理发送时间，时间戳，颜色等数值
+# 但是，如果要做监视，最好用上时间戳，所以这种情况请自行修改代码，使其不处理时间戳
+# 可以嵌套getdanmuku()，但是重复查询则不推荐
+
+# listall(file_path)只需要指定文件路径
+# 这个会以元组的形式返回所有弹幕消息，这些消息同样被处理，key为序号
+# 同样，如果遇到未知类型弹幕，则会返回原始信息，也建议做监视的同学改原始代码
+# 可以嵌套getdanmuku()，但是重复查询则不推荐
+
+import csv
+import os
+import requests
+import time
 from bs4 import BeautifulSoup
+
 
 class DanmukuError(Exception):
     pass
 
-def getdanmuku(cid_input):
 
+def getdanmuku(cid_input):
     try:
         if str(cid_input).isdigit():
             url = str('http://comment.bilibili.com/' + str(cid_input) + '.xml')
@@ -195,8 +213,8 @@ def getdanmuku(cid_input):
     except Exception as e:
         print(e)
 
-def list(file_path,user_count):
-    
+
+def list(file_path, user_count):
     if os.path.exists(file_path):
         pass
     else:
@@ -206,7 +224,7 @@ def list(file_path,user_count):
 
     blank_count = 0
     user_count = int(user_count)
-    
+
     try:
         for line in file_path.readlines():
             if blank_count != user_count:
@@ -217,7 +235,7 @@ def list(file_path,user_count):
 
                 line = line.split(',')
 
-                #整理发送时间
+                # 整理发送时间
                 send_time_left = int(str(line[0]).split('.')[0])
                 send_time_right = int(str(line[0]).split('.')[1])
 
@@ -237,10 +255,10 @@ def list(file_path,user_count):
                     sec = str('0') + str(sec)
                 else:
                     pass
-                send_time_video = str(('%s:%s:%s.%s')%(hour,minu,sec,send_time_right))
+                send_time_video = str(('%s:%s:%s.%s') % (hour, minu, sec, send_time_right))
                 def_list.append(send_time_video)
 
-                #整理弹幕类型
+                # 整理弹幕类型
                 if int(line[1]) == 1:
                     danmuku_type = ('滚动弹幕')
                 elif int(line[1]) == 4:
@@ -263,19 +281,19 @@ def list(file_path,user_count):
                 else:
                     def_list.append(danmuku_type)
 
-                #字号不需要整理
+                # 字号不需要整理
                 def_list.append(str(line[2]))
 
-                #整理颜色
+                # 整理颜色
                 color = str(hex(int(line[3])))[2:]
                 def_list.append(color)
 
-                #转换时间戳
+                # 转换时间戳
                 timestamp = int(line[4])
                 time_send = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(timestamp)))
                 def_list.append(time_send)
 
-                #整理弹幕池
+                # 整理弹幕池
                 if int(line[5]) == 0:
                     danmuku_pool = '普通弹幕池'
                 elif int(line[5]) == 1 or int(line[5]) == 2:
@@ -288,11 +306,11 @@ def list(file_path,user_count):
                 else:
                     def_list.append(danmuku_pool)
 
-                #用户ID和rowID不用整理
+                # 用户ID和rowID不用整理
                 def_list.append(str(line[6]))
                 def_list.append(str(line[7]))
 
-                #调整发送内容
+                # 调整发送内容
                 send_what = str(line[8])
                 def_list.append(send_what[0:len(send_what) - 1])
 
@@ -308,8 +326,8 @@ def list(file_path,user_count):
     finally:
         file_path.close()
 
+
 def listall(file_path):
-    
     if os.path.exists(file_path):
         pass
     else:
@@ -318,16 +336,16 @@ def listall(file_path):
     file_path = open(str(file_path), 'r', encoding='utf-8')
 
     blank_count = 0
-    
+
     try:
         return_thing = {}
         for line in file_path.readlines():
             raw_mode = False
             def_list = []
-            
+
             line = line.split(',')
 
-            #整理发送时间
+            # 整理发送时间
             send_time_left = int(str(line[0]).split('.')[0])
             send_time_right = int(str(line[0]).split('.')[1])
 
@@ -347,10 +365,10 @@ def listall(file_path):
                 sec = str('0') + str(sec)
             else:
                 pass
-            send_time_video = str(('%s:%s:%s.%s')%(hour,minu,sec,send_time_right))
+            send_time_video = str(('%s:%s:%s.%s') % (hour, minu, sec, send_time_right))
             def_list.append(send_time_video)
 
-            #整理弹幕类型
+            # 整理弹幕类型
             if int(line[1]) == 1:
                 danmuku_type = ('滚动弹幕')
             elif int(line[1]) == 4:
@@ -365,53 +383,53 @@ def listall(file_path):
                 danmuku_type = ('精确弹幕')
             else:
                 raw_mode = True
-                
+
             if raw_mode:
                 pass
             else:
                 def_list.append(danmuku_type)
 
-            #字号不需要整理
+            # 字号不需要整理
             def_list.append(str(line[2]))
 
-            #整理颜色
+            # 整理颜色
             color = str(hex(int(line[3])))[2:]
             def_list.append(color)
 
-            #转换时间戳
+            # 转换时间戳
             timestamp = int(line[4])
             time_send = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(timestamp)))
             def_list.append(time_send)
 
-            #整理弹幕池
+            # 整理弹幕池
             if int(line[5]) == 0:
                 danmuku_pool = '普通弹幕池'
             elif int(line[5]) == 1 or int(line[5]) == 2:
                 danmuku_pool = '特殊弹幕池'
             else:
                 raw_mode = True
-    
+
             if raw_mode:
                 pass
             else:
                 def_list.append(danmuku_pool)
-                
-            #用户ID和rowID不用整理
+
+            # 用户ID和rowID不用整理
             def_list.append(str(line[6]))
             def_list.append(str(line[7]))
 
-            #调整发送内容
+            # 调整发送内容
             send_what = str(line[8])
             def_list.append(send_what[0:len(send_what) - 1])
-            
+
             if raw_mode:
-               return_thing[str(blank_count)] = line
+                return_thing[str(blank_count)] = line
             else:
-               return_thing[str(blank_count)] = def_list
-               def_list = []
-                
+                return_thing[str(blank_count)] = def_list
+                def_list = []
+
             blank_count += 1
-                
+
     except Exception as e:
         print(e)
 
@@ -419,9 +437,10 @@ def listall(file_path):
         file_path.close()
         return return_thing
 
+
 def count(file_path):
     try:
-        
+
         if os.path.exists(file_path):
             pass
         else:
@@ -431,12 +450,11 @@ def count(file_path):
         file_path = open(str(file_path), 'r', encoding='utf-8')
 
         blank_count = 0
-    
+
         for line in file_path.readlines():
             blank_count += 1
         file_path.close()
         return blank_count
-                
+
     except Exception as e:
         print(e)
-

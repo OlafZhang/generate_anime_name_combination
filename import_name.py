@@ -1,17 +1,20 @@
-#这个程序可以帮助你录入人物
-#物品列表应该使用UTF-8编码，使用姓+名+反转值
-#即使不符合中国/日本姓名规则，也要先输入姓
-#可以只输入名字，或不输入反转值
+# 这个程序可以帮助你录入人物
+# 物品列表应该使用UTF-8编码，使用姓+名+反转值
+# 即使不符合中国/日本姓名规则，也要先输入姓
+# 可以只输入名字，或不输入反转值
 
-import pymysql,os,time
-#人物列表文件路径
+import os
+import pymysql
+import time
+
+# 人物列表文件路径
 file_name = ('name.txt')
-#数据库配置，请先配置，确保有数据库
+# 数据库配置，请先配置，确保有数据库
 mysql_host = ("localhost")
-mysql_name = ("")
-mysql_pass = ("")
+mysql_name = ("root")
+mysql_pass = ("123456")
 mysql_db = ("anime_name")
-#忽视警告，真时不显示警告，且立刻开始录入
+# 忽视警告，真时不显示警告，且立刻开始录入
 skip_error = True
 name_list_file = open(file_name, 'r', encoding='utf-8')
 new_name_count = 0
@@ -22,7 +25,7 @@ print("[*]自动录入人物工具")
 print("--------------------")
 print("[*]列表文件：" + os.path.realpath(file_name))
 print("[*]正在连接数据库...")
-db = pymysql.connect(mysql_host ,mysql_name ,mysql_pass ,mysql_db )
+db = pymysql.connect(mysql_host, mysql_name, mysql_pass, mysql_db)
 print("[*]成功连接数据库")
 if skip_error:
     pass
@@ -35,6 +38,8 @@ else:
     time.sleep(10)
 print("[*]构建浮标，开始录入")
 print("--------------------")
+
+
 def count_name():
     count_cursor = db.cursor()
     count_item = count_cursor.execute("select count(*) from NAME")
@@ -42,8 +47,12 @@ def count_name():
     item_number = int(count_item_data[0])
     count_cursor.close()
     return item_number
+
+
 makeup_count = 0
 makeup_error_count = 0
+
+
 def makeup_database():
     global makeup_count
     global makeup_error_count
@@ -103,15 +112,17 @@ def makeup_database():
         print("[*]数据库整理完毕")
     else:
         print("[*]数据库不需要整理")
+
+
 first_count = int(count_name())
-reverse_list = ["0","1","2","100","101"]
+reverse_list = ["0", "1", "2", "100", "101"]
 for line in name_list_file.readlines():
     line = line.strip('\n')
     new_name = str('"' + str(line) + '"')
     line = line.split(',')
-    #默认值
+    # 默认值
     reverse_value = 0
-    #判断语句1
+    # 判断语句1
     if len(line) == 1:
         family_name = str("")
         last_name = str(line[0])
@@ -131,21 +142,23 @@ for line in name_list_file.readlines():
         reverse_value = int(line[2])
     else:
         continue
-    #判断语句2
+    # 判断语句2
     if reverse_value == 0 or reverse_value == 100:
         full_name = str(('"%s%s"') % (family_name, last_name))
     elif reverse_value == 1 or reverse_value == 101:
-        full_name = str(('"%s·%s"') % (last_name,family_name))
+        full_name = str(('"%s·%s"') % (last_name, family_name))
     elif reverse_value == 2:
         full_name = str(('"%s"') % (last_name))
     else:
         continue
-    #查重
+    # 查重
     find_cursor = db.cursor()
     if family_name == str(""):
-        search_name = str(('select * from name where FAMILY IS NULL and NAME = "%s" and reverse = %d;') % (last_name, reverse_value))
+        search_name = str(
+            ('select * from name where FAMILY IS NULL and NAME = "%s" and reverse = %d;') % (last_name, reverse_value))
     else:
-        search_name  = str(('select * from name where FAMILY = "%s" and NAME = "%s" and reverse = %d;')%(family_name, last_name, reverse_value))
+        search_name = str(('select * from name where FAMILY = "%s" and NAME = "%s" and reverse = %d;') % (
+        family_name, last_name, reverse_value))
     find_item = find_cursor.execute(search_name)
     try:
         find_item_data = find_cursor.fetchone()
@@ -162,7 +175,7 @@ for line in name_list_file.readlines():
         try:
             first_count += 1
             if family_name == str(""):
-                new_name = str(('"%s",NULL,"%s",%d')%(first_count, last_name, reverse_value))
+                new_name = str(('"%s",NULL,"%s",%d') % (first_count, last_name, reverse_value))
             else:
                 new_name = str(('"%s","%s","%s",%d') % (first_count, family_name, last_name, reverse_value))
             input_cursor = db.cursor()
@@ -170,7 +183,7 @@ for line in name_list_file.readlines():
             input = input_cursor.execute(command)
             input_cursor.close()
             new_name_count += 1
-            print("[+]成功添加人物" + full_name )
+            print("[+]成功添加人物" + full_name)
         except:
             error_name_count += 1
             print("[!]出现未知错误" + full_name)
@@ -190,6 +203,5 @@ print("[*]文件内人物数量：" + str(error_name_count + new_name_count + du
 print("--------------------")
 print("[*]当前数据库人物数量：" + str(count_name()))
 print("--------------------")
-print("5秒后自动退出...")
-time.sleep(5)
-
+print("10秒后自动退出...")
+time.sleep(10)
